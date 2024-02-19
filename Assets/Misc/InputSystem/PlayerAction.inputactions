@@ -1,0 +1,34 @@
+{
+    "name": "PlayerAction",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "92b65498-6213-478d-bee6-208c98b0ef92",
+            "actions": [
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "1713bb64-fc60-40c5-aedc-028dbdf3a3f4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9f31e10c-7665-4daf-9f90-27485de23ff8",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
