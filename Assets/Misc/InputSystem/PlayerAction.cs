@@ -40,7 +40,7 @@ public partial class @PlayerAction: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""9f31e10c-7665-4daf-9f90-27485de23ff8"",
+                    ""id"": ""da63579c-0dcc-443b-8c2f-2f9cb805a14c"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
