@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
 
     [Header("InputManager")]
     [SerializeField] private InputManager inputManager;
-    private int currentCamera;
+    public int currentCamera;
     private float mouseX;
     private float mouseY;
     private float rotY = 0f;
@@ -37,7 +37,29 @@ public class CameraControl : MonoBehaviour
         cameraSettings[currentCamera].cinemachineCamera.transform.localRotation = Quaternion.Euler(rotY, rotX, 0f);
 
     }
+
+    public void CameraMove(int cameraID, string onlyNameID)
+    {
+        if (onlyNameID == cameraSettings[currentCamera].nameID || onlyNameID == "none")
+        {
+            for (int i = 0; i < cameraSettings.Length; i++)
+            {
+                CinemachineVirtualCamera cinemachine = cameraSettings[i].cinemachineCamera.GetComponent<CinemachineVirtualCamera>();
+                if (i == cameraID)
+                {
+                    cinemachine.Priority = 2;
+                }
+                else
+                {
+                    cinemachine.Priority = 1;
+                }
+            }
+            currentCamera = cameraID;
+        }
+    }
 }
+
+
 
 [System.Serializable]
 public class CameraSetting
