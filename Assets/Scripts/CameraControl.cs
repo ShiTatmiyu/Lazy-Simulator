@@ -23,21 +23,6 @@ public class CameraControl : MonoBehaviour
         currentCamera = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 lookDir = inputManager.GetLookInput();
-
-        rotX += lookDir.x * sensitivity * Time.deltaTime;
-        rotY -= lookDir.y * sensitivity * Time.deltaTime;
-
-        rotX = Mathf.Clamp(rotX, cameraSettings[currentCamera].minX, cameraSettings[currentCamera].maxX);
-        rotY = Mathf.Clamp(rotY, cameraSettings[currentCamera].minY, cameraSettings[currentCamera].maxY);
-
-        cameraSettings[currentCamera].cinemachineCamera.transform.localRotation = Quaternion.Euler(rotY, rotX, 0f);
-
-    }
-
     public void CameraMove(int cameraID, string onlyNameID)
     {
         if (onlyNameID == cameraSettings[currentCamera].nameID || onlyNameID == "none")
@@ -66,9 +51,4 @@ public class CameraSetting
 {
     public string nameID;
     public GameObject cinemachineCamera;
-    public float maxX;
-    public float minX;
-    public float maxY;
-    public float minY;
-
 }

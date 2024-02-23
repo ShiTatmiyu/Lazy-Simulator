@@ -25,6 +25,7 @@ public class CameraChanger : MonoBehaviour
         {
             if (hitInfo.collider.GetComponent<CameraObject>() != null)
             {
+                Debug.Log("Raycast");
                 int cameraID = hitInfo.collider.GetComponent<CameraObject>().cameraID;
                 string onlyNameID = hitInfo.collider.GetComponent<CameraObject>().onlyID;
                 if (inputManager.playerAction.Player.Interact.triggered)
