@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraChanger : MonoBehaviour
+public class CameraInteract : MonoBehaviour
 {
     private CameraControl cameraControl;
     [SerializeField] private InputManager inputManager;
