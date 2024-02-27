@@ -475,7 +475,7 @@ Transform:
   m_GameObject: {fileID: 123469464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.084790856, y: -0, z: -0, w: 0.9963988}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.094, z: -0.013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1042,6 +1042,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 153400, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
       insertIndex: -1
       addedObject: {fileID: 461061224}
+    - targetCorrespondingSourceObject: {fileID: 153400, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461061227}
   m_SourcePrefab: {fileID: 100100000, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
 --- !u!4 &461061222 stripped
 Transform:
@@ -1074,6 +1077,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.36012268, y: 0.25406954, z: 0.2553602}
   m_Center: {x: -0.000000022351742, y: 0.12698938, z: 0.0007220581}
+--- !u!114 &461061227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461061223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b894caaea422e4542ae0b317ea036f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraID: 1
 --- !u!1 &470804993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,8 +2397,6 @@ MonoBehaviour:
     cinemachineCamera: {fileID: 989006005}
   - nameID: PC
     cinemachineCamera: {fileID: 123469464}
-  - nameID: Couch
-    cinemachineCamera: {fileID: 0}
   currentCamera: 0
 --- !u!114 &963194231
 MonoBehaviour:
@@ -4408,7 +4422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraID: 0
-  onlyID: none
 --- !u!1001 &3924766077518809316
 PrefabInstance:
   m_ObjectHideFlags: 0

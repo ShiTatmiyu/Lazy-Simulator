@@ -13,24 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Interact",
-                    "type": "Button",
-                    "id": "5631ef54-e1f8-4644-8b2a-23ea6b216027",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Toggle",
-                    "type": "Button",
-                    "id": "3c60d6c0-ecb8-4430-8608-cb39b598abe3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -55,10 +37,45 @@
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "0a9d7fd8-ae1b-4246-92e8-c3cc17eb5f0c",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "c3b9396a-a5e9-45b6-8e55-d052b84259fe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
+                    "name": "Toggle",
+                    "type": "Button",
+                    "id": "5d705ac9-96fa-4ed2-acc1-f931040d9d25",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Back",
+                    "type": "Button",
+                    "id": "ad466f77-20db-4661-87f8-f902fb66d82c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
                     "name": "",
-                    "id": "299f4d69-35d1-4460-ba42-884f95680efb",
+                    "id": "afb5afeb-fb75-409d-bc94-a8a2a6018b5f",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
@@ -69,12 +86,23 @@
                 },
                 {
                     "name": "",
-                    "id": "b229381b-107a-4bda-8582-161f856fae83",
+                    "id": "8ca8108a-95ce-4509-a7d9-0e12a19be403",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5772bf9b-b8f4-440a-b81a-9666d54a0f7c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

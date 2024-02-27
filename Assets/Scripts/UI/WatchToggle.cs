@@ -12,7 +12,7 @@ public class WatchToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inputManager.playerAction.Player.Toggle.triggered)
+        if(inputManager.playerAction.UI.Toggle.triggered)
         {
             if(watchShown)
             {

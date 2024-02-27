@@ -17,24 +17,21 @@ public class CameraControl : MonoBehaviour
         currentCamera = 0;
     }
 
-    public void CameraMove(int cameraID, string onlyNameID)
+    public void CameraMove(int cameraID)
     {
-        if (onlyNameID == cameraSettings[currentCamera].nameID || onlyNameID == "none")
+        for (int i = 0; i < cameraSettings.Length; i++)
         {
-            for (int i = 0; i < cameraSettings.Length; i++)
+            CinemachineVirtualCamera cinemachine = cameraSettings[i].cinemachineCamera.GetComponent<CinemachineVirtualCamera>();
+            if (i == cameraID)
             {
-                CinemachineVirtualCamera cinemachine = cameraSettings[i].cinemachineCamera.GetComponent<CinemachineVirtualCamera>();
-                if (i == cameraID)
-                {
-                    cinemachine.Priority = 2;
-                }
-                else
-                {
-                    cinemachine.Priority = 1;
-                }
+                cinemachine.Priority = 2;
             }
-            currentCamera = cameraID;
+            else
+            {
+                cinemachine.Priority = 1;
+            }
         }
+        currentCamera = cameraID;
     }
 }
 
