@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Toggle",
+                    "type": "Button",
+                    "id": "3c60d6c0-ecb8-4430-8608-cb39b598abe3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -49,8 +58,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4ce1b0c0-ca20-44b9-b24d-45fd0ad4ee29",
-                    "path": "<Mouse>/leftButton",
+                    "id": "299f4d69-35d1-4460-ba42-884f95680efb",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -60,12 +69,12 @@
                 },
                 {
                     "name": "",
-                    "id": "299f4d69-35d1-4460-ba42-884f95680efb",
-                    "path": "<Keyboard>/e",
+                    "id": "b229381b-107a-4bda-8582-161f856fae83",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Toggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
