@@ -33,6 +33,11 @@ public class CameraInteract : MonoBehaviour
                     cameraControl.CameraMove(cameraID, onlyNameID);
                 }
             }
+
+            // if ()
+            // {
+
+            // }
         }
     }
 }

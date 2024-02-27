@@ -1733,8 +1733,8 @@ MonoBehaviour:
   m_RecenterTarget: 0
   m_VerticalAxis:
     Value: 0
-    m_SpeedMode: 0
-    m_MaxSpeed: 200
+    m_SpeedMode: 1
+    m_MaxSpeed: 0.4
     m_AccelTime: 0
     m_DecelTime: 0
     m_InputAxisName: Mouse Y
@@ -1757,15 +1757,15 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
     Value: 0
-    m_SpeedMode: 0
-    m_MaxSpeed: 200
+    m_SpeedMode: 1
+    m_MaxSpeed: 0.4
     m_AccelTime: 0
     m_DecelTime: 0
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
     m_InvertInput: 0
-    m_MinValue: -90
-    m_MaxValue: 90
+    m_MinValue: -110
+    m_MaxValue: 110
     m_Wrap: 0
     m_Recentering:
       m_enabled: 0
@@ -2383,8 +2383,6 @@ MonoBehaviour:
     cinemachineCamera: {fileID: 123469464}
   - nameID: Couch
     cinemachineCamera: {fileID: 0}
-  sensitivity: 20
-  inputManager: {fileID: 1718620002}
   currentCamera: 0
 --- !u!114 &963194231
 MonoBehaviour:

@@ -7,15 +7,9 @@ public class CameraControl : MonoBehaviour
 {
     [Header("Camera Option")]
     [SerializeField] private CameraSetting[] cameraSettings;
-    [SerializeField] private float sensitivity = 10f;
 
     [Header("InputManager")]
-    [SerializeField] private InputManager inputManager;
     public int currentCamera;
-    private float mouseX;
-    private float mouseY;
-    private float rotY = 0f;
-    private float rotX = 0f;
 
     // Start is called before the first frame update
     void Start()
