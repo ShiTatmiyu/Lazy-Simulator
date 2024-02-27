@@ -9,12 +9,23 @@ public class CameraControl : MonoBehaviour
     [SerializeField] private CameraSetting[] cameraSettings;
 
     [Header("InputManager")]
+    [SerializeField] private InputManager inputManager;
+    private int previousCamera;
     public int currentCamera;
 
     // Start is called before the first frame update
     void Start()
     {
+        previousCamera = 0;
         currentCamera = 0;
+    }
+
+    private void Update()
+    {
+        if(inputManager.playerAction.UI.Back.triggered && cameraSettings[currentCamera].isChild)
+        {
+            CameraMove(previousCamera);
+        }
     }
 
     public void CameraMove(int cameraID)
@@ -31,6 +42,7 @@ public class CameraControl : MonoBehaviour
                 cinemachine.Priority = 1;
             }
         }
+        previousCamera = currentCamera;
         currentCamera = cameraID;
     }
 }
@@ -42,4 +54,5 @@ public class CameraSetting
 {
     public string nameID;
     public GameObject cinemachineCamera;
+    public bool isChild;
 }

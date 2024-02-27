@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     {
         playerAction = new PlayerAction();
         playerAction.Player.Enable();
+        playerAction.UI.Enable();
     }
 
     public Vector2 GetLookInput()

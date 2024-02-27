@@ -1038,58 +1038,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 153400, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 461061224}
-    - targetCorrespondingSourceObject: {fileID: 153400, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 461061227}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
 --- !u!4 &461061222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 478650, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
   m_PrefabInstance: {fileID: 461061221}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &461061223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 153400, guid: bf021d31c282a084089cd6e7afb24924, type: 3}
-  m_PrefabInstance: {fileID: 461061221}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &461061224
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461061223}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.36012268, y: 0.25406954, z: 0.2553602}
-  m_Center: {x: -0.000000022351742, y: 0.12698938, z: 0.0007220581}
---- !u!114 &461061227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461061223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b894caaea422e4542ae0b317ea036f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraID: 1
 --- !u!1 &470804993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,8 +2350,11 @@ MonoBehaviour:
   cameraSettings:
   - nameID: Bed
     cinemachineCamera: {fileID: 989006005}
+    isChild: 0
   - nameID: PC
     cinemachineCamera: {fileID: 123469464}
+    isChild: 1
+  inputManager: {fileID: 1718620002}
   currentCamera: 0
 --- !u!114 &963194231
 MonoBehaviour:
