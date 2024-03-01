@@ -9,10 +9,12 @@ public class CameraInteract : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private float rayDist;
     [SerializeField] private LayerMask mask;
+    private ParamSetting paramSetting;
 
     void Start()
     {
-        cameraControl = gameObject.GetComponent<CameraControl>();    
+        cameraControl = gameObject.GetComponent<CameraControl>();
+        paramSetting = gameObject.GetComponent<ParamSetting>();
     }
 
     // Update is called once per frame
@@ -23,20 +25,24 @@ public class CameraInteract : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, rayDist, mask))
         {
-            if (hitInfo.collider.GetComponent<CameraObject>() != null)
+            if (inputManager.playerAction.UI.Interact.triggered)
             {
-                Debug.Log("Raycast");
-                int cameraID = hitInfo.collider.GetComponent<CameraObject>().cameraID;
-                if (inputManager.playerAction.UI.Interact.triggered)
+                if (hitInfo.collider.GetComponent<CameraObject>() != null)
                 {
+                    Debug.Log("Raycast Camera");
+                    int cameraID = hitInfo.collider.GetComponent<CameraObject>().cameraID;
+
                     cameraControl.CameraMove(cameraID);
+
+                }
+                if (hitInfo.collider.GetComponent<ParamModifier>() != null)
+                {
+                    Debug.Log("Raycast Param");
+                    ParamModifier paramModifier = hitInfo.collider.GetComponent<ParamModifier>();
+
+                    paramSetting.UpdateParam(paramModifier.paramID, paramModifier.value);
                 }
             }
-
-            // if ()
-            // {
-
-            // }
         }
     }
 }
