@@ -12,12 +12,13 @@ public class InputManager : MonoBehaviour
         playerAction = new PlayerAction();
         playerAction.Player.Enable();
         playerAction.UI.Enable();
+        playerAction.Debug.Enable();
     }
 
-    public Vector2 GetLookInput()
+    public Vector2 GetMoveInput()
     {
-        Vector2 lookDir = playerAction.Player.Look.ReadValue<Vector2>();
+        Vector2 moveDir = playerAction.Player.Move.ReadValue<Vector2>();
 
-        return lookDir;
+        return moveDir;
     }
 }
