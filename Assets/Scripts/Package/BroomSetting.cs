@@ -7,9 +7,12 @@ public class BroomSetting : MonoBehaviour
     [Header("InputManager")]
     [SerializeField] private InputManager inputManager;
 
+    [Header("Broom Serialize")]
+    [SerializeField] private GameObject broomPivot;
+    [SerializeField] private GameObject broomObject;
+
     [Header("BroomClick")]
     [SerializeField] private CameraControl cameraControl;
-    [SerializeField] private GameObject broomPivot;
     [SerializeField] private Animator anim;
     private bool clickedToggle = false;
     private bool used = false;
@@ -44,6 +47,7 @@ public class BroomSetting : MonoBehaviour
                     anim.SetInteger("currentState", 2);
                 }
             }
+            HandleBroomMovement();
         }
         else
         {
@@ -52,17 +56,16 @@ public class BroomSetting : MonoBehaviour
             clickedToggle = false;
         }
 
-        HandleBroomMovement();
+
     }
 
     private void HandleBroomMovement()
     {
-        if (used == true)
-        {
-            moveInput = inputManager.GetMoveInput();
+        moveInput = inputManager.GetMoveInput();
+        // CharacterController broomController = broomPivot.GetComponent<CharacterController>();
 
-            Debug.Log(moveInput);
-            broomPivot.transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * (broomMoveSpeed * Time.deltaTime));
-        }
+        Debug.Log(moveInput);
+        // broomController.Move(new Vector3(moveInput.x, 0, moveInput.y));
+        broomObject.transform.Translate(new Vector3(moveInput.y, 0, moveInput.x * -1) * (broomMoveSpeed * Time.deltaTime));
     }
 }
