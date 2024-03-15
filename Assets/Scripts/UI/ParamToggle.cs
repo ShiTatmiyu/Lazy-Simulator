@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class WatchToggle : MonoBehaviour
+public class ParamToggle : MonoBehaviour
 {
-    [SerializeField] private GameObject watchObject;
+    [SerializeField] private GameObject paramObject;
     [SerializeField] private InputManager inputManager;
-    private bool watchShown = true;
+    private bool paramShown = true;
 
     // Update is called once per frame
     void Update()
     {
         if(inputManager.playerAction.UI.Toggle.triggered)
         {
-            if(watchShown)
+            if(paramShown)
             {
-                LeanTween.moveY(watchObject,-270,1).setEaseInOutCubic();
-                watchShown = false;
+                LeanTween.moveY(paramObject,-550,1).setEaseInOutCubic();
+                paramShown = false;
             }
             else
             {
-                LeanTween.moveY(watchObject,270,1).setEaseInOutCubic();
-                watchShown = true;
+                LeanTween.moveY(paramObject,550,1).setEaseInOutCubic();
+                paramShown = true;
             }
         }
     }
